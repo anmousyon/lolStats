@@ -1,0 +1,17 @@
+name
+pos
+team
+gamesPlayed
+minPlayed
+gold
+wards
+exp
+cs
+monst
+champDmg
+towerDmg
+takenDmg
+healing
+kills
+deaths
+assists

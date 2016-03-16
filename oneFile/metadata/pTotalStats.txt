@@ -1,0 +1,17 @@
+name :
+position :
+team :
+total games played:
+total min played :
+total gold :
+total wards :
+total exp :
+total cs :
+total monsters killed :
+total champion damage :
+total tower damage:
+total taken damage :
+total healing :
+total kills :
+total deaths :
+total assists :

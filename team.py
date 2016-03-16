@@ -1,37 +1,71 @@
-class team:
+#! python
+
+class team():
 	
+	teamStats = []
+
+	def __init__(self, abv):
+		self.name = abv
+		#main array
+		self.teamStats = []
+
+	#players
+	players = []
+'''
 	#game results
-	win;
-	loss;
-	wlRatio;
-	gameLength;
+	win = teamStats[0]
+	loss = teamStats[1]
+	wlRatio = teamStats[2]
+	gameLength = teamStats[3]
 	
 	#Kills
-	firstBloodTime;
-	firstBlood;
-	kills;
+	firstKillTime = teamStats[4]
+	firstKill = teamStats[5]
+	kills = teamStats[6]
 
 	#Deaths
-	firstDeathTime;
-	firstDeath;
-	deaths;
+	firstDeathTime = teamStats[7]
+	firstDeath = teamStats[8]
+	deaths = teamStats[9]
 	
+	#Assists
+	firstAssistTime = teamStats[9]
+	firstAssist = teamStats[10]
+	assists = teamStats[11]
+
 	#Tower
-	firstTowerTime;
-	firstTower;
-	towers;
+	firstTowerTime = teamStats[12]
+	firstTower = teamStats[13]
+	towers = teamStats[14]
+	
+	#Inhibitor
+	firstInhibTime = teamStats[15]
+	firstInhib = teamStats[16]
+	inhibs = teamStats[17]
 
 	#Dragon
-	firstDragonTime;
-	firstDragon;
-	dragons;
+	firstDragonTime = teamStats[18]
+	firstDragon = teamStats[19]
+	dragons = teamStats[20]
 
 	#Baron
-	firstBaronTime;
-	firstBaron;
-	barons;
+	firstBaronTime = teamStats[21]
+	firstBaron = teamStats[22]
+	barons = teamStats[23]
 
 	#Scuttle
-	firstScuttleTime;
-	firstScuttle;
-	scuttles;
+	firstScuttleTime = teamStats[24]
+	firstScuttle = teamStats[25]
+	scuttles = teamStats[26]
+'''
+teamList = []
+
+def fill():
+	
+	with open('teamNames.txt') as teamFile:
+		teamList = teamFile.read().splitlines()
+	
+	for x in range(10):
+		newTeam = team(x)
+		print(x)
+		teamList.append(newTeam)
