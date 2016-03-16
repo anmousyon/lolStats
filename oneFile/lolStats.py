@@ -45,6 +45,7 @@ class player:
 				#print(data)
 				self.pTotalStats.append(float(data.strip()))
 			print(self.pTotalStats)
+
 	def pProcData(self):
 		if(self.pRawStats):
 			for i in range(5, 13):
@@ -159,22 +160,22 @@ def writeData():
 
 	for p in playerList:
 		if(p.pRawStats):
-			fileName = (p.pRawStats[0]).strip() + "PRawStats.txt"
+			fileName = (str(int(p.pRawStats[0]))) + "PRawStats.txt"
 			f = open((os.path.join(path, fileName)), 'w')
 			for data in p.pRawStats:
-				f.write(data)
+				f.write(str(data)+"\n")
 			f.close()
 		if(p.pPMStats):
-			fileName = (p.pRawStats[0]).strip() + "PPMStats.txt"
+			fileName = (str(int(p.pRawStats[0]))) + "PPMStats.txt"
 			f = open((os.path.join(path, fileName)), 'w')
 			for data in p.pPMStats:
-				f.write(str(data))
+				f.write(str(data)+"\n")
 			f.close()
 		if(p.pTotalStats):
-			fileName = (p.pRawStats[0]).strip() + "PTotalStats.txt"
+			fileName = (str(int(p.pRawStats[0]))) + "PTotalStats.txt"
 			f = open((os.path.join(path, fileName)), 'w')
 			for data in p.pTotalStats:
-				f.write(str(data))
+				f.write(str(data)+"\n")
 			f.close()
 		
 	path = "./teamStats/"
@@ -191,15 +192,19 @@ def writeData():
 			f.close()
 
 def printData():
-	for p in playerList:
-		print(p.pRawStats[0].strip())
-		for i in range(len(p.pRawStats)):
-			print(player.pRawFormat[i].strip() + " " + str(p.pRawStats[i]))
-		for i in range(len(p.pPMStats)):
-			print(player.pPMFormat[i].strip() + " " + str(p.pPMStats[i]))
-	for t in teamList:
-		for i in range(len(t.tRawStats)):
-			print(player.tRawFormat[i].strip() + " " + str(t.tRawStats[i]))
+	if(playerList):
+		for p in playerList:
+			if(p.pRawStats):
+				print((p.pRawStats[0]))
+				for i in range(len(p.pRawStats)):
+					print(player.pRawFormat[i].strip() + " " + str(p.pRawStats[i]))
+			if(p.pPMStats):
+				for i in range(len(p.pPMStats)):
+					print(player.pPMFormat[i].strip() + " " + str(p.pPMStats[i]))
+	if(teamList):
+		for t in teamList:
+			for i in range(len(t.tRawStats)):
+				print(player.tRawFormat[i].strip() + " " + str(t.tRawStats[i]))
 
 def main():
 	fillFormats()
