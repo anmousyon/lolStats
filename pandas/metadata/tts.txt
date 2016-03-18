@@ -1,0 +1,10 @@
+wins total
+game length total
+kills total
+deaths total
+assists total
+towers total
+inhibs total
+dragons total
+barons total
+scuttles total

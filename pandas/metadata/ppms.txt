@@ -1,0 +1,12 @@
+gold pm
+wards pm
+exp pm
+cs pm 
+monsters pm
+champ dmg pm
+tower dmg pm
+taken dmg pm
+healing pm
+kills pm
+deaths pm
+assists pm

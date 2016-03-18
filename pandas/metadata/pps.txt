@@ -1,0 +1,29 @@
+name :
+position :
+team :
+games played :
+avg min played :
+avg gold :
+avg gold pm :
+avg wards :
+avg wards pm :
+avg exp :
+avg exp pm :
+avg cs :
+avg cs pm :
+avg monst :
+avg monst pm :
+avg champion damage :
+avg champion damage pm :
+avg tower damage :
+avg tower damage pm :
+avg taken damage :
+avg taken damage pm :
+avg healing :
+avg healing pm :
+avg kills :
+avg kills pm :
+avg deaths :
+avg deaths pm :
+avg assists :
+avg assists pm :
