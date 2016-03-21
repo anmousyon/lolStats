@@ -22,13 +22,10 @@ class player:
 			os.makedirs(path)
 		
 		if (os.path.isfile(os.path.join(path, fileName))):
-			print("opened results")
 			with open((os.path.join(path, fileName))) as pResultsFile:
 				lines = pResultsFile.readlines()
 			for data in lines:
-				#print(data)
 				self.pRawStats.append(float(data.strip()))
-			print(self.pRawStats)
 
 		fileName = str(self.name).strip() + "PTotalStats.txt"
 		path = "./playerStats/"
@@ -37,14 +34,10 @@ class player:
 			os.makedirs(path)
 
 		if (os.path.isfile(os.path.join(path, fileName))):
-			print("opened totals")
-			print (fileName)
 			with open((os.path.join(path, fileName))) as pTotalFile:
 				lines = pTotalFile.readlines()
 			for data in lines:
-				#print(data)
 				self.pTotalStats.append(float(data.strip()))
-			print(self.pTotalStats)
 
 	def pProcData(self):
 		if(self.pRawStats):
@@ -106,10 +99,12 @@ def fillFormats():
 		player.pRawFormat = pFormat.readlines()
 	
 	path = "./metadata/"
-	
-	with open((os.path.join(path,'tRawStats.txt'))) as tFormat:
-		player.tRawFormat = tFormat.readlines()
-	
+
+	if not os.path.exists(path):
+		os.makedirs(path)
+
+	with open((os.path.join(path, 'pRawStats.txt'))) as pFormat:
+		player.pRawFormat = pFormat.readlines()
 	path = "./metadata/"
 
 	with open((os.path.join(path, 'pPMStats.txt'))) as pFormat:
